@@ -6,9 +6,8 @@ body {
     display: flex; 
     justify-content: center; 
     align-items: center;
-    /* اضافه کردن عکس پس‌زمینه شیک */
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
-                url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=2047&auto=format&fit=crop') center/cover no-repeat fixed;
+    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
+                url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=2047') center/cover no-repeat fixed;
     color: #fff;
     padding: 20px;
 }
@@ -17,44 +16,64 @@ body {
     width: 100%; 
     max-width: 400px; 
     text-align: center; 
-    /* حالت شیشه‌ای برای کل باکس */
-    background: rgba(255, 255, 255, 0.05);
-    padding: 40px 20px;
-    border-radius: 30px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.1);
 }
 
 h1 {
     color: #c5a059;
     font-size: 28px;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     text-transform: uppercase;
     margin-bottom: 5px;
 }
 
 p {
-    color: #aaa;
+    color: #888;
     font-size: 11px;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
-.links { display: flex; flex-direction: column; gap: 15px; }
-
-a {
-    display: block;
-    background: rgba(197, 160, 89, 0.1);
-    border: 1px solid rgba(197, 160, 89, 0.3);
-    padding: 15px;
-    border-radius: 12px;
+/* حل مشکل اصلی: استایل دادن به کلاسی که توی HTML استفاده کردی */
+.link-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 18px;
+    margin-bottom: 15px;
+    border-radius: 15px;
     color: #fff !important;
     text-decoration: none !important;
     font-size: 14px;
+    font-weight: 500;
     transition: 0.3s;
 }
 
-a:hover {
-    background: #c5a059;
-    color: #000 !important;
+.link-card:hover {
+    background: rgba(197, 160, 89, 0.1);
+    border-color: #c5a059;
     transform: translateY(-3px);
+}
+
+/* استایل دادن به آیکون‌های فونت‌آسام که توی HTML داری */
+.link-card i {
+    margin-right: 10px;
+    color: #c5a059;
+}
+
+.logo-circle {
+    width: 80px;
+    height: 80px;
+    background: rgba(197, 160, 89, 0.1);
+    border: 2px solid #c5a059;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #c5a059;
+    font-size: 24px;
 }
